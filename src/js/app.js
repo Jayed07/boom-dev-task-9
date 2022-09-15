@@ -8,16 +8,5 @@ window.addEventListener("DOMContentLoaded", () => {
     alert("💣");
   });
 
-  const articleElement = document.createElement('article');
-  articleElement.className = "message";
-  articleElement.innerHTML = "some content";
-
-  const bodyElement = document.body;
-
-  bodyElement.addEventListener('click', () => {
-
-    for (let i = 0; i < 3; i++) {
-    bodyElement.appendChild(articleElement.cloneNode(1));
-    }
-  });
+  
 });
