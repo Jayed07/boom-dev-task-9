@@ -10,16 +10,14 @@ window.addEventListener("DOMContentLoaded", () => {
 
   const articleElement = document.createElement('article');
   articleElement.className = "message";
-  const text = document.createTextNode("some content");
-  articleElement.appendChild(text);
+  articleElement.innerHTML = "some content";
 
-  const bodyElement = document.querySelector('body');
+  const bodyElement = document.body;
 
-  bodyElement.addEventListener('click', function handleClick() {
-    bodyElement.appendChild(articleElement);
-    bodyElement.appendChild(articleElement);
-    bodyElement.appendChild(articleElement);
-    bodyElement.appendChild(articleElement);
-    bodyElement.appendChild(articleElement);
+  bodyElement.addEventListener('click', () => {
+
+    for (let i = 0; i < 3; i++) {
+    bodyElement.appendChild(articleElement.cloneNode(1));
+    }
   });
 });
